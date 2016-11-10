@@ -1,0 +1,23 @@
+{
+  "name": "page-links",
+  "homepage": "https://github.com/Pancake-CMS/page-links",
+  "authors": [
+    "Prateek Jadhwani <prateekjadhwani@users.noreply.github.com>"
+  ],
+  "description": "A web component what lets user jump from one page to another and performs all the routing operations in the background.",
+  "main": "page-links.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "^1.7.0",
+    "iron-icons": "PolymerElements/iron-icons#^1.1.3",
+    "iron-icon": "PolymerElements/iron-icon#^1.0.12",
+    "paper-tooltip": "PolymerElements/paper-tooltip#^1.1.3"
+  }
+}

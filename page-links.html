@@ -1,0 +1,63 @@
+<link rel="import" href="../polymer/polymer.html">
+<link rel="import" href="../iron-icons/iron-icons.html">
+<link rel="import" href="../paper-tooltip/paper-tooltip.html">
+
+<dom-module id="page-links">
+    <template>
+        <style>
+            :host {
+                display: block;
+                text-align: center;
+            }
+            a, a:hover, a:focus, a:visited {
+                color: black;
+                margin-left: 5px;
+                text-decoration: none;
+            }
+        </style>
+        <template is="dom-repeat" id="menu" items="{{pageList}}">
+            <a href$="[[item.link]]">
+                <iron-icon icon$="[[item.icon]]"></iron-icon>
+                <paper-tooltip>[[item.text]]</paper-tooltip>
+            </a>
+        </template>
+    </template>
+    <script>
+        Polymer({
+            is: 'page-links',
+
+            properties: {
+                pageList: {
+                    type: Array,
+                    value: [
+                        {
+                            icon: 'icons:extension',
+                            text: 'Components Page (Add/Manage Components)',
+                            link: '#/components'
+                        },
+                        {
+                            icon: 'icons:dashboard',
+                            text: 'Templates Page (Edit/Create Templates)',
+                            link: '#/templates'
+                        },
+                        {
+                            icon: 'icons:gavel',
+                            text: 'Page Manager',
+                            link: '#/pages'
+                        },
+                        {
+                            icon: 'icons:translate',
+                            text: 'Translate a Page Content',
+                            link: '#/content'
+                        },
+                        {
+                            icon: 'icons:power-settings-new',
+                            text: 'Logout',
+                            link: '#/logout'
+                        }
+                    ]
+                }
+            }
+        })
+    </script>
+</dom-module>
